@@ -4,9 +4,10 @@
 
 int	main(void)
 {
-	char a[] = "12345";
-	char b[] = "123456";
-	printf("%d", strncmp(a, b, 5));
+	char a[] = "122222774";
+	char b[] = "1222227z";
+	printf("%d\n", ft_strncmp(a, b, 8));
+	printf("%d\n", strncmp(a, b, 8));
 	return (0);
 }
 
