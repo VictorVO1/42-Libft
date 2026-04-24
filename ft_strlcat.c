@@ -6,22 +6,11 @@
 /*   By: vvalenzu <vvalenzu@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/23 10:27:03 by vvalenzu          #+#    #+#             */
-/*   Updated: 2025/07/24 10:59:14 by vvalenzu         ###   ########.fr       */
+/*   Updated: 2026/04/24 11:41:49 by vvalenzu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
-{
-	int	con;
-
-	con = 0;
-	while (*str != '\0')
-	{
-		con++;
-		str++;
-	}
-	return (con);
-}
+#include "libft.h"
 
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {

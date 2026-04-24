@@ -4,11 +4,9 @@
 
 int	main(void)
 {
-	char str[] = "hola mundo";
-	char str2[] = "cccaaaaaaaaaaa";
-	ft_strlcpy(str2, str, 11);
-	printf("%s\n", str2); // esperado: ababcd
-
+	char a[] = "12345";
+	char b[] = "123456";
+	printf("%d", strncmp(a, b, 5));
 	return (0);
 }
 

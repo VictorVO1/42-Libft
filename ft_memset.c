@@ -1,6 +1,18 @@
-# include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vvalenzu <vvalenzu@student.42malaga.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/04/24 11:35:44 by vvalenzu          #+#    #+#             */
+/*   Updated: 2026/04/24 11:39:38 by vvalenzu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void *ft_memset(void *s, int c, size_t n)
+#include <stdlib.h>
+
+void	*ft_memset(void *s, int c, size_t n)
 {
 	unsigned char	*ptr;
 

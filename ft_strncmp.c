@@ -5,34 +5,26 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vvalenzu <vvalenzu@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/22 09:57:38 by vvalenzu          #+#    #+#             */
-/*   Updated: 2025/07/24 15:32:25 by vvalenzu         ###   ########.fr       */
+/*   Created: 2026/04/24 12:41:16 by vvalenzu          #+#    #+#             */
+/*   Updated: 2026/04/24 13:11:29 by vvalenzu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+#include "libft.h"
+
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	unsigned int	i;
 
 	i = 0;
-	while (*s1 && i < n)
+	while ((*s1 && *s2) && i < n)
 	{
-		if (!*s2)
-			return (1);
-		if (*s2)
+		if (*s1 == *s2)
 		{
-			if (*s1 < *s2)
-				return (-1);
-			else if (*s1 > *s2)
-				return (1);
+			i++;
+			s1++;
+			s2++;
 		}
-		else
-			return (1);
-		s1++;
-		s2++;
-		i++;
 	}
-	if (!*s1 && *s2)
-		return (-1);
-	return (0);
+	return (*s1 - *s2);
 }
