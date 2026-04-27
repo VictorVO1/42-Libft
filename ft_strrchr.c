@@ -1,38 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vvalenzu <vvalenzu@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/24 12:41:16 by vvalenzu          #+#    #+#             */
-/*   Updated: 2026/04/27 11:40:39 by vvalenzu         ###   ########.fr       */
+/*   Created: 2026/04/27 11:47:21 by vvalenzu          #+#    #+#             */
+/*   Updated: 2026/04/27 11:58:05 by vvalenzu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+char	*ft_strrchr(const char *s, int c)
 {
-	unsigned int	i;
-
-	i = 0;
-	if (n == 0)
-	{
-		return (0);
-	}
-	while (i < n - 1 && (*s1 && *s2))
-	{
-		if ((*s1 == *s2))
-		{
-			i++;
-			s1++;
-			s2++;
-		}
-		else
-		{
-			return (*s1 - *s2);
-		}
-	}
-	return (*s1 - *s2);
+	
 }

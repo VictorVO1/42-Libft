@@ -4,11 +4,8 @@
 
 int	main(void)
 {
-	char a[] = "122222774";
-	char b[] = "1222227z";
-	printf("%d\n", ft_strncmp(a, b, 8));
-	printf("%d\n", strncmp(a, b, 8));
-	return (0);
+	const str[] = "123456789";
+	printf("%s", ft_strrchr(str, '5'));
 }
 
 /* MEMSET
@@ -41,5 +38,13 @@ char	src[] = "Hola mundo";
 	printf("Original: %s\n", dst1);
 	printf("ft_memcpy: %s\n", dst2);
 
+	return (0);
+*/
+
+/*srtncmp
+	char a[] = "56";
+	char b[] = "564";
+	printf("%d\n", ft_strncmp(a, b, 2));
+	printf("%d\n", strncmp(a, b, 2));
 	return (0);
 */
