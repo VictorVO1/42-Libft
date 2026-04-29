@@ -1,11 +1,12 @@
+#include "libft.h"
+#include <stddef.h>
 #include <stdio.h>
 #include <string.h>
-#include "libft.h"
+#include <stdlib.h>
 
-int	main(void)
+int main()
 {
-	const str[] = "123456789";
-	printf("%s", ft_strrchr(str, '5'));
+	return (0);
 }
 
 /* MEMSET
