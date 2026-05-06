@@ -6,11 +6,12 @@
 /*   By: vvalenzu <vvalenzu@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/04 22:21:52 by vvalenzu          #+#    #+#             */
-/*   Updated: 2026/05/04 22:21:52 by vvalenzu         ###   ########.fr       */
+/*   Updated: 2026/05/06 09:46:10 by vvalenzu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 int	num_len(int n)
 {
 	int	len;
