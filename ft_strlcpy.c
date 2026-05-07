@@ -6,7 +6,7 @@
 /*   By: vvalenzu <vvalenzu@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/27 10:52:30 by vvalenzu          #+#    #+#             */
-/*   Updated: 2026/04/24 11:42:34 by vvalenzu         ###   ########.fr       */
+/*   Updated: 2026/05/07 09:53:48 by vvalenzu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dsize)
 
 	i = 0;
 	len = ft_strlen(src);
-	if ( dsize > 0)
-	{	
+	if (dsize > 0)
+	{
 		while (i < dsize - 1 && src[i] != '\0')
 		{
 			dst[i] = src[i];

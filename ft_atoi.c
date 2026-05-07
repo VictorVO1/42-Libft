@@ -6,11 +6,11 @@
 /*   By: vvalenzu <vvalenzu@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 10:50:01 by vvalenzu          #+#    #+#             */
-/*   Updated: 2025/07/29 14:45:01 by vvalenzu         ###   ########.fr       */
+/*   Updated: 2026/05/07 09:32:58 by vvalenzu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_atoi(const char *nptr)
+int	ft_atoi(const char *nptr)
 {
 	int	i;
 	int	sign;
@@ -32,5 +32,5 @@ int ft_atoi(const char *nptr)
 		n = (n * 10) + (nptr[i] - '0');
 		i++;
 	}
-	return (n * sign);	
+	return (n * sign);
 }

@@ -6,14 +6,14 @@
 /*   By: vvalenzu <vvalenzu@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/03 20:01:32 by vvalenzu          #+#    #+#             */
-/*   Updated: 2026/05/03 20:01:32 by vvalenzu         ###   ########.fr       */
+/*   Updated: 2026/05/07 09:47:53 by vvalenzu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 int	words_in_string(char const *s, char c)
-{	
+{
 	int	i;
 	int	words;
 
@@ -48,8 +48,9 @@ int	word_len(char const *s, int start, char c)
 
 void	free_all(char **arr, int count)
 {
-	int	i = 0;
+	int	i;
 
+	i = 0;
 	while (i < count)
 	{
 		free(arr[i]);
@@ -69,7 +70,7 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	split = malloc(sizeof(char *) * (words_in_string(s, c) + 1));
 	if (!split)
-        return (NULL);
+		return (NULL);
 	i = 0;
 	j = 0;
 	while (s[i])
@@ -81,7 +82,7 @@ char	**ft_split(char const *s, char c)
 			if (!split[j])
 			{
 				free_all(split, j);
-                return (NULL);
+				return (NULL);
 			}
 			j++;
 			i += len;

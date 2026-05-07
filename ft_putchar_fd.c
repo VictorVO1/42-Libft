@@ -6,7 +6,7 @@
 /*   By: vvalenzu <vvalenzu@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/06 09:18:24 by vvalenzu          #+#    #+#             */
-/*   Updated: 2026/05/06 09:25:41 by vvalenzu         ###   ########.fr       */
+/*   Updated: 2026/05/07 10:02:53 by vvalenzu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 void	ft_putchar_fd(char c, int fd)
 {
 	if (!c || fd < 0)
-		return;
+		return ;
 	write(fd, &c, 1);
 }

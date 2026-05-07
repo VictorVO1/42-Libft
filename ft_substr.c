@@ -6,7 +6,7 @@
 /*   By: vvalenzu <vvalenzu@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/03 09:53:03 by vvalenzu          #+#    #+#             */
-/*   Updated: 2026/05/03 09:53:03 by vvalenzu         ###   ########.fr       */
+/*   Updated: 2026/05/07 09:58:38 by vvalenzu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	if (len > slen - start)
 		len = slen - start;
-	
 	sub = malloc(len + 1);
 	if (!sub)
 		return (NULL);

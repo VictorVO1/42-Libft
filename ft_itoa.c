@@ -6,7 +6,7 @@
 /*   By: vvalenzu <vvalenzu@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/04 22:21:52 by vvalenzu          #+#    #+#             */
-/*   Updated: 2026/05/06 09:46:10 by vvalenzu         ###   ########.fr       */
+/*   Updated: 2026/05/07 09:43:56 by vvalenzu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,14 +35,12 @@ char	*ft_itoa(int n)
 	char	*num;
 	int		len;
 
-	if(n == INT_MIN)
+	if (n == INT_MIN)
 		return (strdup("-2147483648"));
-	
 	len = num_len(n);
 	num = malloc(len + 1);
 	if (!num)
 		return (NULL);
-	
 	num[len] = '\0';
 	if (n == 0)
 	{
