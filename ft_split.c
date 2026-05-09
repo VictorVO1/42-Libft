@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	words_in_string(char const *s, char c)
+static int	count_words(char const *s, char c)
 {
 	int	i;
 	int	words;
@@ -33,9 +33,9 @@ int	words_in_string(char const *s, char c)
 	return (words);
 }
 
-int	word_len(char const *s, int start, char c)
+static size_t	word_len(char const *s, size_t start, char c)
 {
-	int	len;
+	size_t	len;
 
 	len = 0;
 	while (s[start] && s[start] != c)
@@ -46,9 +46,9 @@ int	word_len(char const *s, int start, char c)
 	return (len);
 }
 
-void	free_all(char **arr, int count)
+static void	free_all(char **arr, size_t count)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (i < count)
@@ -59,18 +59,12 @@ void	free_all(char **arr, int count)
 	free(arr);
 }
 
-char	**ft_split(char const *s, char c)
+static char	**fill_split(char **split, char const *s, char c)
 {
-	char	**split;
 	size_t	i;
 	size_t	j;
 	size_t	len;
 
-	if (!s)
-		return (NULL);
-	split = malloc(sizeof(char *) * (words_in_string(s, c) + 1));
-	if (!split)
-		return (NULL);
 	i = 0;
 	j = 0;
 	while (s[i])
@@ -92,4 +86,16 @@ char	**ft_split(char const *s, char c)
 	}
 	split[j] = NULL;
 	return (split);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**split;
+
+	if (!s)
+		return (NULL);
+	split = malloc(sizeof(char *) * (count_words(s, c) + 1));
+	if (!split)
+		return (NULL);
+	return (fill_split(split, s, c));
 }
