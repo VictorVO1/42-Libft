@@ -72,8 +72,7 @@ static char	**fill_split(char **split, char const *s, char c)
 		if (s[i] != c)
 		{
 			len = word_len(s, i, c);
-			split[j] = ft_substr(s, i, len);
-			if (!split[j])
+			if (!(split[j] = ft_substr(s, i, len)))
 			{
 				free_all(split, j);
 				return (NULL);
