@@ -6,7 +6,7 @@
 /*   By: vvalenzu <vvalenzu@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/03 20:01:32 by vvalenzu          #+#    #+#             */
-/*   Updated: 2026/05/07 09:47:53 by vvalenzu         ###   ########.fr       */
+/*   Updated: 2026/05/09 17:46:56 by vvalenzu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,8 @@ static char	**fill_split(char **split, char const *s, char c)
 		if (s[i] != c)
 		{
 			len = word_len(s, i, c);
-			if (!(split[j] = ft_substr(s, i, len)))
+			split[j] = ft_substr(s, i, len);
+			if (!split[j])
 			{
 				free_all(split, j);
 				return (NULL);
