@@ -6,7 +6,15 @@
 
 int main()
 {
+	t_list *a;
+	t_list *b;
+
+	a = ft_lstnew("A");
+	b = ft_lstnew("B");
 	
+	
+	printf("%s\n", (char *)a->content);
+	return 0;
 }
 
 /* MEMSET
@@ -40,6 +48,15 @@ char	src[] = "Hola mundo";
 	printf("ft_memcpy: %s\n", dst2);
 
 	return (0);
+*/
+
+/*MEMMOVE
+	char str1[20]= "aaa";
+	char str2[20] = "aaa";
+
+	ft_memmove(str1, "b", 2);
+	memmove(str2, "b", 2);
+	printf("%s\n%s\n", str1, str2);
 */
 
 /*srtncmp

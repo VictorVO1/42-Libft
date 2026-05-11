@@ -177,7 +177,7 @@ int main(void)
 ```
 ## Compilar el ejemplo
 ```bash
-gcc main.c libft.a -I
+gcc main.c libft.a -I .
 ```
 ## Ejecutar
 ```
