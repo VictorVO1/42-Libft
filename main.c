@@ -4,16 +4,28 @@
 #include <string.h>
 #include <stdlib.h>
 
+static void f_print(void *content)
+{
+	printf("%s\n", (char)content);
+}
+
 int main()
 {
 	t_list *a;
 	t_list *b;
+	t_list *c;
+	t_list *d;
 
 	a = ft_lstnew("A");
 	b = ft_lstnew("B");
+	c = ft_lstnew("C");
+	d = ft_lstnew("D");
 	
-	
-	printf("%s\n", (char *)a->content);
+	ft_lstadd_back(&a, b);
+	ft_lstadd_back(&a, c);
+	ft_lstadd_back(&a, d);
+	printf("Cantidad de nodos: %d\n", ft_lstsize(a));
+	ft_lstiter(a, f_print);
 	return 0;
 }
 
