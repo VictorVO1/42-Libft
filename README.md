@@ -50,20 +50,20 @@ Todas las funciones están declaradas en `libft.h`.
 
 | Función | Prototipo | Descripción |
 |---|---|---|
-| ft_strlen | `size_t ft_strlen(const char *s);` | Devuelve la longitud de un string |
+| ft_strlen | `size_t ft_strlen(const char *s);` | Devuelve la longitud de una string |
 | ft_strlcpy | `size_t ft_strlcpy(char *dst, const char *src, size_t size);` | Copia string con límite de tamaño |
 | ft_strlcat | `size_t ft_strlcat(char *dst, const char *src, size_t size);` | Concatena strings con límite de tamaño |
 | ft_strchr | `char *ft_strchr(const char *s, int c);` | Busca la primera aparición de un carácter |
 | ft_strrchr | `char *ft_strrchr(const char *s, int c);` | Busca la última aparición de un carácter |
 | ft_strncmp | `int ft_strncmp(const char *s1, const char *s2, size_t n);` | Compara dos strings hasta n caracteres |
 | ft_strnstr | `char *ft_strnstr(const char *big, const char *little, size_t len);` | Busca substring dentro de string |
-| ft_strdup | `char *ft_strdup(const char *s1);` | Duplica un string con malloc |
+| ft_strdup | `char *ft_strdup(const char *s1);` | Duplica una string con malloc |
 | ft_substr | `char *ft_substr(char const *s, unsigned int start, size_t len);` | Extrae subcadena |
 | ft_strjoin | `char *ft_strjoin(char const *s1, char const *s2);` | Une dos strings |
 | ft_strtrim | `char *ft_strtrim(char const *s1, char const *set);` | Elimina caracteres del inicio y final |
 | ft_split | `char **ft_split(char const *s, char c);` | Divide string en array usando delimitador |
-| ft_strmapi | `char *ft_strmapi(char const *s, char (*f)(unsigned int, char));` | Aplica función ( f ) a cada carácter creando nuevo string |
-| ft_striteri | `void ft_striteri(char *s, void (*f)(unsigned int, char*));` | Aplica función ( f ) a cada carácter con índice |
+| ft_strmapi | `char *ft_strmapi(char const *s, char (*f)(unsigned int, char));` | Aplica función ( f ) a cada carácter creando nueva string |
+| ft_striteri | `void ft_striteri(char *s, void (*f)(unsigned int, char*));` | Aplica función ( f ) a cada carácter modificando la string original |
 
 ---
 
@@ -106,10 +106,10 @@ Todas las funciones están declaradas en `libft.h`.
 | Función | Prototipo | Descripción |
 |---|---|---|
 | ft_lstnew | `t_list *ft_lstnew(void *content);` | Crea un nuevo nodo |
+| ft_lstadd_back | `void ft_lstadd_back(t_list **lst, t_list *new);` | Añade nodo al final |
 | ft_lstadd_front | `void ft_lstadd_front(t_list **lst, t_list *new);` | Añade nodo al inicio |
 | ft_lstsize | `int ft_lstsize(t_list *lst);` | Cuenta nodos de la lista |
 | ft_lstlast | `t_list *ft_lstlast(t_list *lst);` | Devuelve último nodo |
-| ft_lstadd_back | `void ft_lstadd_back(t_list **lst, t_list *new);` | Añade nodo al final |
 | ft_lstdelone | `void ft_lstdelone(t_list *lst, void (*del)(void*));` | Elimina un nodo |
 | ft_lstclear | `void ft_lstclear(t_list **lst, void (*del)(void*));` | Limpia toda la lista |
 | ft_lstiter | `void ft_lstiter(t_list *lst, void (*f)(void *));` | Aplica función ( f ) a cada nodo |
@@ -183,6 +183,19 @@ gcc main.c libft.a -I .
 ```
 ./a.out
 ```
+---
+
+## 🤖 Uso de IA
+
+Durante el desarrollo de este proyecto se utilizaron herramientas de IA (ChatGPT) como asistencia complementaria para:
+
+- Aclarar conceptos de C y gestión de memoria
+- Comprobar casos límite y comportamientos inesperados
+- Mejorar la redacción del README
+
+La lógica, implementación y depuración del proyecto fueron realizadas manualmente.
+
+---
 # 📚 Recursos
 ### Documentación
 - **Manual de libc**: https://man7.org/linux/man-pages/
